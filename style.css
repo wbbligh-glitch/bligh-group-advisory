@@ -1,0 +1,166 @@
+@font-face {
+  font-family: "Aptos Local";
+  src: local("Aptos"), local("Aptos Display");
+}
+
+:root {
+  --ink: #082c59;
+  --muted: #666d75;
+  --line: #d9dde2;
+  --paper: #ffffff;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Aptos Local", "Segoe UI", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 24px;
+}
+
+.hero {
+  width: min(760px, 100%);
+  text-align: center;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 82px;
+}
+
+.brand img {
+  display: block;
+  width: min(560px, 82vw);
+  height: auto;
+}
+
+.brand-subtitle {
+  margin-top: 8px;
+  padding-left: 0.28em;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.30em;
+}
+
+.content {
+  margin-bottom: 64px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.intro {
+  max-width: 510px;
+  margin: 20px auto 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.contact {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 36px 38px;
+  background: #fff;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+.contact h2 {
+  margin: 0 0 27px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.field { margin-bottom: 19px; }
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+input, textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  padding: 10px 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  min-height: 105px;
+  resize: vertical;
+}
+
+input:focus, textarea:focus {
+  border-bottom-color: var(--ink);
+}
+
+button {
+  width: 100%;
+  margin-top: 28px;
+  padding: 14px 20px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fff;
+  color: var(--ink);
+}
+
+footer {
+  margin-top: 38px;
+  color: var(--muted);
+  font-size: 0.73rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .page { padding: 36px 18px; }
+  .brand { margin-bottom: 60px; }
+  .brand img { width: min(430px, 90vw); }
+  .content { margin-bottom: 48px; }
+  .contact { padding: 28px 22px; }
+}
